@@ -139,7 +139,7 @@
         	
         	$dt = date("M j, Y H:i:s");
         	 
-        	$rrdGraph = new RRDGraph($image_path);
+        	$rrdGraph = new RRDGraphScalr($image_path);
         	
         	$options = array(
         			"--step" => $r["step"],
@@ -276,7 +276,7 @@
         	
         	
         	/*
-        	$graph = new RRDGraph(440, 180, CONFIG::$RRDTOOL_PATH);
+        	$graph = new RRDGraphScalr(440, 180, CONFIG::$RRDTOOL_PATH);
         	
 			$graph->AddDEF("mem1", $rrddbpath, "swap", "AVERAGE");
 			$graph->AddDEF("mem2", $rrddbpath, "swapavail", "AVERAGE");

@@ -30,7 +30,7 @@
      * @version 1.0
      * @author Igor Savchenko <http://webta.net/company.html>
      */
-	class RRDGraph2 extends Core
+	class RRDGraphScalr extends Core
 	{
 	    /**
 	     * RRD Graph width

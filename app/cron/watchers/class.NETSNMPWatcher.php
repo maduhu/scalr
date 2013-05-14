@@ -103,7 +103,7 @@
 
         	$dt = date("M j, Y H:i:s");
 
-        	$rrdGraph = new RRDGraph($image_path);
+        	$rrdGraph = new RRDGraphScalr($image_path);
 
         	$options = array(
         			"--step" => $r["step"],
@@ -155,7 +155,7 @@
         	}
 
         	/*
-        	$graph = new RRDGraph(440, 100, CONFIG::$RRDTOOL_PATH);
+        	$graph = new RRDGraphScalr(440, 100, CONFIG::$RRDTOOL_PATH);
 
         	$graph->AddDEF("in", $rrddbpath, "in", "AVERAGE");
 			$graph->AddDEF("out", $rrddbpath, "out", "AVERAGE");

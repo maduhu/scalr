@@ -104,7 +104,7 @@
 			foreach($this->RRAs as $RRA)
 				array_push($args, $RRA->__toString());
 				
-			if(rrd_create($this->DBPath, $args, count($args)))
+			if(rrd_create($this->DBPath, $args))
 				return true;
 			else
 				throw new Exception(_("Cannot create RRD: ".rrd_error()));
@@ -147,7 +147,9 @@
 			foreach ($data as $val)
 				$arg .= ":{$val}";
 			
-			if(rrd_update($this->DBPath, $arg))
+			$argarray = array();
+			array_push($argarray, $arg);
+			if(rrd_update($this->DBPath, $argarray))
 				return true;
 			else 
 				throw new Exception(_("Cannot update RRD: ".rrd_error()));

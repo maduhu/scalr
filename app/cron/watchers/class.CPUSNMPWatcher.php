@@ -115,7 +115,7 @@
         {		
         	$dt = date("M j, Y H:i:s");
         	
-        	$rrdGraph = new RRDGraph($image_path);
+        	$rrdGraph = new RRDGraphScalr($image_path);
         	
         	$options = array(
         		"--step" => $r["step"],
